@@ -7,30 +7,25 @@ using System.Web.Mvc;
 namespace MVCUIDesigning.Controllers
 {
     public class HomeController : Controller
-    {       
-        [HttpGet]
-        public ActionResult AddEmp()
+    {
+
+        public ViewResult Login()
         {
             return View();
         }
-        
-        //public ViewResult AddEmp(int? id,string name,string job,double? salary)
-        //{
-        //    ViewData["Id"] = id;
-        //    ViewData["Name"] = name;
-        //    ViewData["Job"] = job;
-        //    ViewData["Salary"] = salary;
-        //    return View("DisplayEmp");
-        //}
-        [HttpPost]
-        public ViewResult AddEmp(FormCollection fc)
+        public ViewResult Validate(FormCollection fc)
         {
-            ViewData["Id"] = fc["Id"];
-            ViewData["Name"] = fc["Name"];
-            ViewData["Job"] = fc["Job"];
-            ViewData["Salary"] = fc["Salary"];
-            return View("DisplayEmp2");
+            if (fc["txtName"] == "Raju" && fc["txtPwd"] == "admin#123")
+            {
+                Session["User"] = fc["txtName"];
+                return View("Success");
+            }
+            else
+            {
+                ViewData["User"] = fc["txtName"];
+                return View("Failure");
+            }
         }
-       
+
     }
 }

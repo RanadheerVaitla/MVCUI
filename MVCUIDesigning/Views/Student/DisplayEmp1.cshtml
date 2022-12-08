@@ -1,0 +1,27 @@
+﻿@model MVCUIDesigning.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayEmp1</title>
+</head>
+<body>
+    <div> 
+        <ul>
+            <li>@Html.DisplayNameFor(s => s.Sid):@Model.Sid</li>
+            <li>@Html.DisplayNameFor(s=>s.Name) : @Model.Name</li>
+            <li>@Html.DisplayNameFor(s=>s.Class) : @Html.DisplayFor(s=>s.Class)</li>
+            <li>@Html.DisplayNameFor(s=>s.Gender) : @Html.DisplayFor(s=>s.Gender)</li>
+            <li>@Html.DisplayNameFor(s=>s.Fees) : @Model.Fees</li>
+            <li>@Html.DisplayNameFor(s=>s.Address) : @Model.Address</li>
+            <a href="/Student/AddstudentST">Home Page</a>
+        </ul>
+        
+    </div>
+</body>
+</html>

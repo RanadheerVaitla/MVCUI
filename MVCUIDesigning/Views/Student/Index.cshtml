@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @{
+        Html.RenderPartial("_Header");
+    }
+    <div>
+        @using (Html.BeginForm("Index1","Student"))
+        {
+            @Html.Label("Student Id");<br />
+            @Html.TextBox("Sid");<br />
+            @Html.Label("Student Name:");<br />
+            @Html.TextBox("Name");<br />
+            @Html.Label("Class");<br />
+            List<int> cl = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            @Html.DropDownList("Class", new SelectList(cl));<br />
+            @Html.Label("Gender")<br />
+            @Html.RadioButton("Gender", "Male")@:Male
+            @Html.RadioButton("Gender", "Female")@:Female<br />
+            @Html.Label("Fees :")<br />
+            @Html.TextBox("Fees")<br />
+            @Html.Label("Address :")<br />
+            @Html.TextArea("Address");<br />
+            <input type="submit" value="Save" />
+            <input type="reset" value="Reset" />
+        }
+    </div>
+</body>
+</html>

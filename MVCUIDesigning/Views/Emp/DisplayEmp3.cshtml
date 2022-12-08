@@ -1,0 +1,40 @@
+﻿@model MVCUIDesigning.Models.Emp
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayEmp3</title>
+</head>
+<body>
+    <div> 
+        <table align="center" border="1">
+            <tr>
+                <td>Empi Id</td>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <td>Emp Name</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Emp Job</td>
+                <td>@Model.job</td>
+            </tr>
+            <tr>
+                <td>Emp Salary</td>
+                <td>@Model.Salary</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="/Emp/AddEmp">Home Page</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

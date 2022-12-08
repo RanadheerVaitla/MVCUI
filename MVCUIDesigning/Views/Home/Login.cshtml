@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Validate","Home"))
+        {
+            @Html.Label("user Name :",new { @class = "label-primary" })
+            <br />
+            @Html.TextBox("txtName","",new {placeholder="Enter Name"})
+            <br />
+            @Html.Label("Enter Password :", new { @class = "label-primary" })
+            <br />
+            @Html.Password("txtpwd","",new {placeholder="Enter Password"});
+            <br /><br />
+            <input type="submit" value="Login" class="btn-success"/>
+            <input type="reset" value="Reset" class="btn-primary" />
+            <input type="reset" value="Reset" class="btn-primary" />
+
+        }
+    </div>
+</body>
+</html>
