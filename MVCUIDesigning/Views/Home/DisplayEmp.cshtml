@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayEmp</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>@ViewData["Id"]</td>
+            </tr>
+            <tr>
+                <td>Emp Name :</td>
+                <td>@ViewData["Name"]</td>
+            </tr>
+            <tr>
+                <td>Emp Job :</td>
+                <td>@ViewData["Job"]</td>
+            </tr>
+            <tr>
+                <td>Emp salary :</td>
+                <td>@ViewData["Salary"]</td>
+            </tr>
+        </table>
+        <a href="/Home/AddEmp">Home Page</a>
+    </div>
+</body>
+</html>
